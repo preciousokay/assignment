@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title> Precious </title>
+        <meta name="description" content="Website about an individual named Precious">
+    
+         <style>
+    
+            /* lu updated a bit */
+             body, #precious {
+                background-color: #e9c6b1;
+                font-family: monospace;
+                font-size: x-large;
+                color: #301505;
+                border: none;
+            }
+    
+            h1:hover, #precious:hover {
+                color: #e9490a;
+            }
+    
+    
+             nav {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: x-large;
+                padding-top: 15px;
+                padding-bottom: 20px;
+                margin-left: 900px;
+                color: #301505;
+            }
+    
+            h2 {
+                margin-left: 33%;
+            }
+            p {
+                margin-left: 25%;
+            }
+
+            table, td, tr {
+                border-color: #301505;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+
+            /* lu added all below */
+            #hidden{
+                display: none;
+            }
+
+            .kirby{
+                background-image: url("kirby-2.jpg");
+                background-size: cover;
+                background-position: center;
+                height:300px;
+                width: 1100px;
+            }
+
+            .kirby:hover{
+                background-image: url("kirby-wallpaper-1.jpeg");
+            }
+
+            .loading{
+                width: 100%;
+                background-color: white;
+            }
+
+            #loadingBar{
+                width: 1%;
+                height: 20px;
+                background: red;
+            }
+    
+         </style>
+    
+         
+    </head>
+    
+    <body>
+        
+     <!-- lu added-->
+        <button id="precious" onclick="showText()">
+            PRECIOUS
+        </button>
+    
+        <p id="hidden">
+            hello this is for the creative coding course
+        </p>
+    <!---->
+
+
+    <nav>
+         <a href="javaa.html"> Home Page </a>
+        
+        <ul>
+    
+            <li>
+            <a href="hobbies.html"> Favourite Things </a>
+            </li>
+
+        </ul>
+    </nav>
+    
+    
+    <h2>
+       A Little Bit About Me
+    </h2>
+    
+    <img src="kirby-2.jpeg" height="300" width="1100"/>
+     <!-- lu added-->
+    <div class="kirby"></div>
+    <div class="loading">
+        <div id="loadingBar"></div>
+    </div>
+    <table width="100%" border=20px>
+        <tr>
+            <td>
+                Hello, <br>
+                my name is Precious and I am an aspiring multimedia designer
+                with experience doing visual arts. <br>
+                Click "Precious" in the top-right corner to learn more!
+            </td>
+    </table>
+    
+    
+    
+    </body>
+
+    <!-- lu added-->
+    <script>
+        function showText() {
+         document.getElementById("hidden").style.display = "block";
+         }
+
+        loading();
+         function loading() {
+            let i = 0;
+            if (i == 0) {
+                i = 1;
+                var elem = document.getElementById("loadingBar");
+                var width = 1;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        hello
+                        //FINISHED LOADING -- ADD CODE HERE
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        }
+ 
+         function changeColour(){
+            let randomNumber = Math.floor(Math.random() * 3);
+            colors = ["hotpink","orange","green"];
+             document.getElementById('precious').style.color = colors[randomNumber];
+         }
+ 
+         changeColour();
+ 
+         setInterval(function(){
+             changeColour();
+         }, 3000) /* CHANGE THIS TO 30000 for 30 seconds */
+
+         var i = 0;
+
+     </script>
+
+</html>
